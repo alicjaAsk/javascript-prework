@@ -9,7 +9,10 @@ if (playerInput == "1") {
   playerMove = "papier";
 } else if (playerInput == "3") {
   playerMove = "nożyce";
+} else if (playerInput != "1" || "2" || "3") {
+  printMessage("Niewłaściwy wybór");
 }
+
 printMessage("Mój ruch to: " + playerMove);
 
 let randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -37,6 +40,8 @@ if (
   (computerMove == "nożyce" && playerMove == "papier")
 ) {
   printMessage("Tą rozgrywkę wygrywasz Ty!");
+} else if (playerInput != "1" || "2" || "3") {
+  printMessage("Niewłaściwy ruch przeciwnika");
 } else {
   printMessage("Remis");
 }
